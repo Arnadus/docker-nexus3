@@ -76,6 +76,8 @@ RUN curl -L https://www.getchef.com/chef/install.sh | bash \
 VOLUME ${NEXUS_DATA}
 
 EXPOSE 8081
+EXPOSE 5003
+
 USER nexus
 
 ENV INSTALL4J_ADD_VM_PARAMS="-Xms1200m -Xmx1200m -XX:MaxDirectMemorySize=2g -Djava.util.prefs.userRoot=${NEXUS_DATA}/javaprefs"
