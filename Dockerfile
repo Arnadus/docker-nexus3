@@ -44,6 +44,13 @@ ARG NEXUS_DOWNLOAD_SHA256_HASH=ae8cc7891942d71cf12c11e1a98d70c1310e788ab44aa95c5
 ARG JAVA_URL=http://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/server-jre-8u192-linux-x64.tar.gz
 ARG JAVA_DOWNLOAD_SHA256_HASH=3d811a5ec65dc6fc261f488757bae86ecfe285a79992363b016f60cdb4dbe7e6
 
+ARG proxy
+
+ENV    https_proxy=$proxy
+ENV    http_proxy=$proxy
+ENV    HTTP_PROXY=$proxy
+ENV    HTTPS_PROXY=$proxy
+
 ENV JAVA_HOME=/opt/java
 
 # configure nexus runtime
