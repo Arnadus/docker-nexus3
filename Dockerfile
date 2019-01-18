@@ -41,7 +41,7 @@ ARG NEXUS_VERSION=3.14.0-04
 ARG NEXUS_DOWNLOAD_URL=https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz
 ARG NEXUS_DOWNLOAD_SHA256_HASH=ae8cc7891942d71cf12c11e1a98d70c1310e788ab44aa95c5d1e7671cc0187e2
 
-ARG JAVA_URL=http://download.oracle.com/otn-pub/java/jdk/8u192-b12/750e1c8617c5452694857ad95c3ee230/server-jre-8u192-linux-x64.tar.gz
+ARG JAVA_URL=https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jre-8u201-linux-x64.tar.gz
 ARG JAVA_DOWNLOAD_SHA256_HASH=3d811a5ec65dc6fc261f488757bae86ecfe285a79992363b016f60cdb4dbe7e6
 
 ARG proxy
@@ -66,6 +66,7 @@ ARG NEXUS_REPOSITORY_MANAGER_COOKBOOK_URL="https://github.com/sonatype/chef-nexu
 
 ADD solo.json.erb /var/chef/solo.json.erb
 
+RUN env
 # Install using chef-solo
 RUN curl -L https://www.getchef.com/chef/install.sh | bash \
     && /opt/chef/embedded/bin/erb /var/chef/solo.json.erb > /var/chef/solo.json \
