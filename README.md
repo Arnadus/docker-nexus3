@@ -44,7 +44,9 @@ Solving issue:
 1 - Find a newer URL for downloading JRE
 
 visit : https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html \
+
 [It should look like this](JAVA_URL.png)
+
 You want the **Linux x64 tar.gz**
 
 2 - Replace the JAVA_URL arg into docker-compose file with the new URL
